@@ -1,0 +1,426 @@
+@font-face {
+  font-family: 'HelveticaNeue';
+  src: url(fonts/431abd6233013126d330814cb4a3bf9b.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'HelveticaNeue';
+  font-weight: lighter;
+  src: url(fonts/68e836607f21518526de6155f19c0992.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Myanmar MN';
+  src: url(fonts/5ae8f766321c7f8e14bb723c45f1819d.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Myanmar MN';
+  font-weight: bold;
+  src: url(fonts/1d2dd7649a9476580a765b0544dbd8dc.ttf) format('truetype');
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+a {
+  font-family: Myanmar MN;
+  font-weight: bold;
+}
+h2 {
+  font-size: 30px;
+}
+.start-part {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+.start-part__background {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.start-part__logotype {
+  position: absolute;
+  width: 105px;
+  height: 105px;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.start-part__logotype-text {
+  font-family: 'Myanmar MN';
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  position: absolute;
+  top: 180px;
+  left: 50%;
+  transform: translate(-50%);
+  text-align: center;
+}
+.start-part__button-start {
+  position: absolute;
+  bottom: 95px;
+  left: 50%;
+  width: 150px;
+  height: 50px;
+  padding: 10px 0;
+  border: 3px solid #7680c1;
+  border-radius: 8px;
+  background-color: transparent;
+  font-family: 'Myanmar MN';
+  font-weight: bold;
+  font-size: 18px;
+  color: #7680c1;
+  text-transform: uppercase;
+  cursor: pointer;
+  transform: translate(-50%);
+  box-shadow: 0 0 0 0 rgba(0,0,0,0.2);
+  animation: pulse 2.5s infinite;
+  outline: 0;
+  transition: 0.8s;
+}
+.start-part__button-start:hover {
+  animation: none;
+  transition: 0.6s;
+  color: #f8d664;
+  border: 3px solid #f8d664;
+}
+.start-part canvas {
+  background: linear-gradient(180deg, #b4c0ff 0%, #f7f7ff 100%);
+}
+@-moz-keyframes pulse {
+  0% {
+    opacity: 0.8;
+  }
+  70% {
+    box-shadow: 0 0 0 50px rgba(0,0,0,0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0,0,0,0);
+  }
+}
+@-webkit-keyframes pulse {
+  0% {
+    opacity: 0.8;
+  }
+  70% {
+    box-shadow: 0 0 0 50px rgba(0,0,0,0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0,0,0,0);
+  }
+}
+@-o-keyframes pulse {
+  0% {
+    opacity: 0.8;
+  }
+  70% {
+    box-shadow: 0 0 0 50px rgba(0,0,0,0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0,0,0,0);
+  }
+}
+@keyframes pulse {
+  0% {
+    opacity: 0.8;
+  }
+  70% {
+    box-shadow: 0 0 0 50px rgba(0,0,0,0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0,0,0,0);
+  }
+}
+.main-part {
+  display: none;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+}
+.main-part__logotype {
+  position: absolute;
+  width: 105px;
+  height: 105px;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.main-part__background {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+.main-part__object {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%);
+}
+.main-part__object__name {
+  color: #b6aa81;
+}
+.main-part__object__info-icon {
+  filter: invert(96%) sepia(8%) saturate(1867%) hue-rotate(338deg) brightness(81%) contrast(70%);
+  width: 25px;
+  height: auto;
+  margin-left: 15px;
+  cursor: pointer;
+}
+.main-part__information-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+.main-part__information {
+  width: 580px;
+  height: 325px;
+  background-color: rgba(255,255,255,0.4);
+  backdrop-filter: blur(7px);
+  border-radius: 9px;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-part__information__hidden {
+  opacity: 0;
+}
+.main-part__information__text {
+  margin: 20px;
+  padding: 0px 50px 0px 50px;
+  font-family: 'HelveticaNeue';
+  font-weight: lighter;
+  line-height: 25px;
+}
+.main-part .seek_bar {
+  position: absolute;
+  left: 6%;
+  top: 40%;
+  bottom: 30vh;
+  width: 4vh;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-part .seek_bar .current_object {
+  border: 2px solid #fff;
+}
+.main-part .seek_bar .background_object {
+  height: 1.9vh;
+  width: 1.9vh;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  transition: 0.5s;
+}
+.main-part .seek_bar .background_object .seek_bar_object {
+  position: absolute;
+  top: 0.2vh;
+  left: 0.2vh;
+  height: 1.5vh;
+  width: 1.5vh;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 50%;
+}
+.main-part .seek_bar .background_object:hover {
+  transform: scale(1.5);
+  animation-name: button-transition;
+  animation-duration: 0.1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: back;
+}
+.main-part .equalizer-button {
+  position: absolute;
+  top: 10%;
+  right: 7%;
+  width: 30px;
+  height: 30px;
+}
+.main-part .equalizer-button .equalizer {
+  position: absolute;
+  top: 7px;
+  left: 5px;
+  width: 30px;
+  height: 30px;
+}
+.main-part .equalizer-button .equalizer__bar {
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 30px;
+  border-left: 4px solid #fff;
+  transition: 0.2s ease-out 0.2s;
+}
+.main-part .equalizer-button .equalizer__1 {
+  left: 0;
+}
+.main-part .equalizer-button .equalizer__2 {
+  left: 6px;
+}
+.main-part .equalizer-button .equalizer__3 {
+  left: 12px;
+}
+.main-part .equalizer-button .equalizer__4 {
+  left: 18px;
+}
+.main-part .equalizer-button .equalizer__5 {
+  left: 24px;
+}
+.main-part .equalizer-button .equalizer--on .equalizer__bar {
+  animation-name: equalizer-play;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+}
+.main-part .equalizer-button .equalizer--on .equalizer__1 {
+  animation-duration: 0.6s;
+}
+.main-part .equalizer-button .equalizer--on .equalizer__2 {
+  animation-duration: 0.5s;
+}
+.main-part .equalizer-button .equalizer--on .equalizer__3 {
+  animation-duration: 0.58s;
+}
+.main-part .equalizer-button .equalizer--on .equalizer__4 {
+  animation-duration: 0.52s;
+}
+.main-part .equalizer-button .equalizer--on .equalizer__5 {
+  animation-duration: 0.56s;
+}
+.main-part .equalizer-button .equalizer--off .equalizer__bar {
+  animation-name: equalizer-stop;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@-moz-keyframes equalizer-play {
+  0%, 100% {
+    height: 8px;
+  }
+  50% {
+    height: 20px;
+  }
+}
+@-webkit-keyframes equalizer-play {
+  0%, 100% {
+    height: 8px;
+  }
+  50% {
+    height: 20px;
+  }
+}
+@-o-keyframes equalizer-play {
+  0%, 100% {
+    height: 8px;
+  }
+  50% {
+    height: 20px;
+  }
+}
+@keyframes equalizer-play {
+  0%, 100% {
+    height: 8px;
+  }
+  50% {
+    height: 20px;
+  }
+}
+@-moz-keyframes equalizer-stop {
+  0% {
+    height: 15px;
+  }
+  100% {
+    height: 3px;
+  }
+}
+@-webkit-keyframes equalizer-stop {
+  0% {
+    height: 15px;
+  }
+  100% {
+    height: 3px;
+  }
+}
+@-o-keyframes equalizer-stop {
+  0% {
+    height: 15px;
+  }
+  100% {
+    height: 3px;
+  }
+}
+@keyframes equalizer-stop {
+  0% {
+    height: 15px;
+  }
+  100% {
+    height: 3px;
+  }
+}
+@-moz-keyframes button-transition {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+@-webkit-keyframes button-transition {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+@-o-keyframes button-transition {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+@keyframes button-transition {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+
+
+/*# sourceMappingURL=main.css.map*/
