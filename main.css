@@ -214,6 +214,7 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 5vh 1vh 0vh 1vh;
 }
 .main-part__information__hidden {
   opacity: 0;
@@ -225,7 +226,7 @@ h2 {
   font-weight: lighter;
   line-height: 25px;
 }
-.main-part__information__text .schema {
+.main-part__information .schema {
   margin: 0, auto;
   height: 350px;
   width: auto;
