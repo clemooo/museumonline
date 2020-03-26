@@ -179,12 +179,17 @@ h2 {
 .main-part__object__name {
   color: #b6aa81;
 }
+.main-part__object__date {
+  color: #b6aa81;
+  font-weight: normal;
+}
 .main-part__object__info-icon {
   filter: invert(96%) sepia(8%) saturate(1867%) hue-rotate(338deg) brightness(81%) contrast(70%);
   width: 25px;
   height: auto;
   margin-left: 15px;
   cursor: pointer;
+  padding-bottom: 11px;
 }
 .main-part__information-container {
   position: absolute;
