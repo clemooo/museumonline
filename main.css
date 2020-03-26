@@ -205,7 +205,7 @@ h2 {
 }
 .main-part__information {
   width: 580px;
-  height: 325px;
+  height: auto;
   background-color: rgba(255,255,255,0.4);
   backdrop-filter: blur(7px);
   border-radius: 9px;
@@ -224,6 +224,11 @@ h2 {
   font-family: 'HelveticaNeue';
   font-weight: lighter;
   line-height: 25px;
+}
+.main-part__information__text .schema {
+  margin: 0, auto;
+  height: 350px;
+  width: auto;
 }
 .main-part .seek_bar {
   position: absolute;
