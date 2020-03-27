@@ -197,6 +197,8 @@ h2 {
 .main-part__object__date {
   color: #b6aa81;
   font-weight: normal;
+  position: absolute;
+  padding-top: 70px;
 }
 .main-part__object__info-icon {
   filter: invert(96%) sepia(8%) saturate(1867%) hue-rotate(338deg) brightness(81%) contrast(70%);
